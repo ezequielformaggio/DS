@@ -1,0 +1,48 @@
+QMP3
+
+- Tome la desicion de borrar como estaban implementados los uniformes, ya que al agregar un nuevo requerimiento
+  relacionado con la creacion de atuendos, tenerlo separado de los uniformes pierde sentido, ya que estos
+  tambien son atuendos, por lo cual cree una clase generador de atuendo abstracta, de la cual se pueden
+  instanciar otras clases que creen uniformes como sea que los necesiten
+
+- Con respecto a los uniformes, tome la desicion de deshacer el paso anterior, ya que si bien los uniformes son
+  atuendos, hay una diferencia. Los atuendos reciben una lista de ropa de algun guardarropas, por lo cual esa
+  es ropa que ya existe, en cambio, un uniforme es fabricado en el momento, no se le pasa una lista de prendas,
+  se crea una prenda.
+
+Bonus:
+
+● Como usuario QueMePongo, quiero que al aparecer en una sugerencia, la aplicación asuma
+que una prenda ha sido usada.
+
+Al metodo de agregar sugerencia, se le sumaria la funcion marcar prenda como usada.
+la prenda tendria un atributo de tipo INT que representaria la cantidad de veces que se uso la prenda.
+
+● Como usuario QueMePongo, quiero que luego de ser usada 2 veces, se considere a una
+prenda como “sucia”
+
+Agregaria el metodo Bool prendaEstaSucia() que haga esa comparacion con el metodo creado en el
+atributo creado en el item anterior.
+
+● Como usuarie de QuéMePongo, quiero que una prenda “sucia” pueda usarse hasta 3 veces
+para luego ser considerada “percudida”.
+
+Agregaria el metodo Bool prendaEstaPercudida() que verifique si una prenda se uso mas de 5 veces.
+
+● Como usuarie de QuéMePongo, quiero que una prenda “percudida” no pueda ser nunca más
+sugerida.
+
+A la hora de agregar una sugerencia, verificaria que la prenda no este percudida.
+
+● Como usuarie de QuéMePongo, quiero indicar que una prenda ha sido puesta a lavar.
+
+El atributo Bool estaLavandose en la prenda.
+
+● Como usuarie de QuéMePongo, quiero que una prenda “sucia” que es lavada, deje de estarlo.
+
+Agregaria el metodo void lavarPrenda() que modifique el valor de uso de a ropa y lo deje en 0.
+
+● Como usuarie de QuéMePongo, quiero que una prenda no pueda ser sugerida mientras está
+lavándose.
+
+Verificaria el atributo Bool estaLavandose antes de sugerir la prenda

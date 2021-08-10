@@ -1,0 +1,6 @@
+QMP4
+
+- Para facilitar la integracion de otras apis en el futuro, o el cambio de la actual, cree una clase
+  abstracta clima que contenga un metodo que luego las apis se encargaran de completar, para que en caso
+  de tener mas de una api, el metodo con el cual pedimos datos sea el mismo, pero cada una lo implemente
+  de forma diferente.
